@@ -12,8 +12,15 @@ For a dynamic module built using the configurable module builder:
 
 1. Install dependencies with `pnpm i`
 2. Run `pnpm start:dev` in the root
-3. We see that the `AuthorModule` is not initialised, even though we pass `authorEnabled` to `true` in the `BookModule.registerAsync` configuration
-4. Comment out the `registerAsync` configuration, and uncomment the `register` configuration in `app.module.ts`, then we see that the `AuthorModule` is initialised
+3. We see that the `AuthorModule` is not initialised, even though we pass `authorEnabled` to `true` in the `BookModule.registerAsync` configuration:
+
+<img width="1545" alt="image" src="https://github.com/snigdha920/nestjs-extra-options-bug/assets/62167899/d1995f02-a38c-49d2-ab1c-2561cd2186e8">
+
+
+4. Comment out the `registerAsync` configuration, and uncomment the `register` configuration in `app.module.ts`, then we see that the `AuthorModule` is initialised:
+
+<img width="1540" alt="image" src="https://github.com/snigdha920/nestjs-extra-options-bug/assets/62167899/b7e1ddfc-13aa-4782-8fdc-a6be000e834d">
+
 
 ## What is expected?
 
